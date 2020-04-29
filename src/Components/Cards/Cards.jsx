@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = () => {
+const Cards = ({ covidData }) => {
   return (
     <div>
       <h2>Card</h2>
@@ -8,4 +8,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default Cards;
