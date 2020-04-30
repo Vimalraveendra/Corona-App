@@ -1,22 +1,24 @@
 import React from "react";
 import Cards from "./Components/Cards/Cards";
+import Chart from "./Components/Chart/Chart";
 import styles from "./App.module.css";
 import { fetchData } from "./api/api";
 
 class App extends React.Component {
   state = {
-    covidData: {}
+    data: {}
   };
   async componentDidMount() {
-    const data = await fetchData();
-    this.setState({ covidData: data });
+    const fetchedData = await fetchData();
+    this.setState({ data: fetchedData });
   }
   render() {
-    console.log("covid", this.state.covidData);
+    console.log("covid", this.state.data);
     return (
       <div className={styles.container}>
         <h1>Corona App</h1>
-        <Cards data={this.state.covidData} />
+        <Cards data={this.state.data} />
+        <Chart />
       </div>
     );
   }
