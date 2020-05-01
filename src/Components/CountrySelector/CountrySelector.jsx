@@ -12,15 +12,17 @@ const CountrySelector = ({ handleCountry }) => {
 
     fetchCountryAPI();
   }, [setFetchedCountries]);
+
   console.log("count", fetchedCountries);
   return (
     <FormControl className={styles.formControl}>
       <NativeSelect
+        defaultValue=""
         onChange={e => {
           handleCountry(e.target.value);
         }}
       >
-        <option value="global">Global</option>
+        <option value="">Global</option>
         {fetchedCountries.map((country, index) => (
           <option value={country.name} key={index}>
             {country.name}

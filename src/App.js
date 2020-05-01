@@ -17,16 +17,17 @@ class App extends React.Component {
   handleCountryChange = async country => {
     console.log("country", country);
     const fetchedData = await fetchData(country);
-    this.setState({ data: fetchedData });
+    this.setState({ data: fetchedData, country: country });
   };
   render() {
     console.log("covid", this.state.data);
+    console.log("country", this.state.country);
     return (
       <div className={styles.container}>
         <h1>Corona App</h1>
         <Cards data={this.state.data} />
         <CountrySelector handleCountry={this.handleCountryChange} />
-        <Chart />
+        <Chart data={this.state.data} country={this.state.country} />
       </div>
     );
   }
