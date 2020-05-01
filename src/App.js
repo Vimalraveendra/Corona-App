@@ -7,19 +7,25 @@ import { fetchData } from "./api/api";
 
 class App extends React.Component {
   state = {
-    data: {}
+    data: {},
+    country: ""
   };
   async componentDidMount() {
     const fetchedData = await fetchData();
     this.setState({ data: fetchedData });
   }
+  handleCountryChange = async country => {
+    console.log("country", country);
+    const fetchedData = await fetchData(country);
+    this.setState({ data: fetchedData });
+  };
   render() {
     console.log("covid", this.state.data);
     return (
       <div className={styles.container}>
         <h1>Corona App</h1>
         <Cards data={this.state.data} />
-        <CountrySelector />
+        <CountrySelector handleCountry={this.handleCountryChange} />
         <Chart />
       </div>
     );
