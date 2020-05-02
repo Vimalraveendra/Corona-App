@@ -10,14 +10,25 @@ class App extends React.Component {
     data: {},
     country: ""
   };
-  async componentDidMount() {
-    const fetchedData = await fetchData();
-    this.setState({ data: fetchedData });
+  fetchedDataAPI = async country => {
+    if (country) {
+      const fetchedData = await fetchData(country);
+      this.setState({ data: fetchedData, country: country });
+    } else {
+      const fetchedData = await fetchData();
+      this.setState({ data: fetchedData });
+    }
+  };
+  componentDidMount() {
+    this.fetchedDataAPI();
+    // const fetchedData = await fetchData();
+    // this.setState({ data: fetchedData });
   }
-  handleCountryChange = async country => {
-    console.log("country", country);
-    const fetchedData = await fetchData(country);
-    this.setState({ data: fetchedData, country: country });
+  handleCountryChange = country => {
+    this.fetchedDataAPI(country);
+    // console.log("country", country);
+    // const fetchedData = await fetchData(country);
+    // this.setState({ data: fetchedData, country: country });
   };
   render() {
     console.log("covid", this.state.data);
