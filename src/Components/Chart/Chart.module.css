@@ -4,6 +4,7 @@
   width: 75%;
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
+  margin: 20px 0;
 }
 .container:hover {
   transform: scale(1.05);
