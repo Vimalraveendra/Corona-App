@@ -22,11 +22,16 @@ class App extends React.Component {
     }
   };
 
+  // when app initializes componentDidMount fetches the Global Data
   componentDidMount() {
     this.fetchedDataAPI();
     // const fetchedData = await fetchData();
     // this.setState({ data: fetchedData });
   }
+
+  //When the user changes the searchField value to country
+  // calling the fetching the data of country based on the
+  // country picked by the user.
   handleCountryChange = country => {
     this.fetchedDataAPI(country);
     // console.log("country", country);
@@ -34,14 +39,14 @@ class App extends React.Component {
     // this.setState({ data: fetchedData, country: country });
   };
   render() {
-    console.log("covid", this.state.data);
-    console.log("country", this.state.country);
+    const { country, data } = this.state;
+
     return (
       <div className={styles.container}>
         <img src={CoronaImage} alt="corona-19" className={styles.image} />
-        <Cards data={this.state.data} />
+        <Cards data={data} />
         <CountrySelector handleCountry={this.handleCountryChange} />
-        <Chart data={this.state.data} country={this.state.country} />
+        <Chart data={data} country={country} />
       </div>
     );
   }
