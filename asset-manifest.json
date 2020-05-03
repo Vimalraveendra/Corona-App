@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Corona-App/static/css/main.cffbb1ce.chunk.css",
-    "main.js": "/Corona-App/static/js/main.3618367c.chunk.js",
-    "main.js.map": "/Corona-App/static/js/main.3618367c.chunk.js.map",
+    "main.js": "/Corona-App/static/js/main.899cf367.chunk.js",
+    "main.js.map": "/Corona-App/static/js/main.899cf367.chunk.js.map",
     "runtime-main.js": "/Corona-App/static/js/runtime-main.af5ec259.js",
     "runtime-main.js.map": "/Corona-App/static/js/runtime-main.af5ec259.js.map",
     "static/js/2.a37c0c03.chunk.js": "/Corona-App/static/js/2.a37c0c03.chunk.js",
     "static/js/2.a37c0c03.chunk.js.map": "/Corona-App/static/js/2.a37c0c03.chunk.js.map",
     "index.html": "/Corona-App/index.html",
-    "precache-manifest.1fd570173a362711db405748cf6fe704.js": "/Corona-App/precache-manifest.1fd570173a362711db405748cf6fe704.js",
+    "precache-manifest.edd77f11a95b91a5780e7cf9a45e3747.js": "/Corona-App/precache-manifest.edd77f11a95b91a5780e7cf9a45e3747.js",
     "service-worker.js": "/Corona-App/service-worker.js",
     "static/css/main.cffbb1ce.chunk.css.map": "/Corona-App/static/css/main.cffbb1ce.chunk.css.map",
     "static/js/2.a37c0c03.chunk.js.LICENSE.txt": "/Corona-App/static/js/2.a37c0c03.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.af5ec259.js",
     "static/js/2.a37c0c03.chunk.js",
     "static/css/main.cffbb1ce.chunk.css",
-    "static/js/main.3618367c.chunk.js"
+    "static/js/main.899cf367.chunk.js"
   ]
 }
