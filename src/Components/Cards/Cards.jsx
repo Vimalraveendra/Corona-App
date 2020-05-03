@@ -8,6 +8,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
     return "Loading...";
   }
+
   return (
     <div className={styles.container}>
       <Grid container justify="center" spacing={3}>

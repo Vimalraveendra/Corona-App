@@ -13,7 +13,7 @@ class App extends React.Component {
   };
 
   fetchedDataAPI = async country => {
-    if (country) {
+    if (country !== 0) {
       const fetchedData = await fetchData(country);
       this.setState({ data: fetchedData, country: country });
     } else {
