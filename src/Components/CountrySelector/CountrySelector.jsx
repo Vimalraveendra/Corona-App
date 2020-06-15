@@ -16,8 +16,9 @@ const CountrySelector = ({ handleCountry }) => {
   return (
     <FormControl className={styles.formControl}>
       <NativeSelect
+        aria-label="Search Countries"
         defaultValue=""
-        onChange={e => {
+        onChange={(e) => {
           handleCountry(e.target.value);
         }}
       >

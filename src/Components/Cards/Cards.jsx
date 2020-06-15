@@ -75,7 +75,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           md={3}
         >
           <CardContent>
-            <Typography color="error">Deaths</Typography>
+            <Typography className={styles.error}>Deaths</Typography>
             <Typography variant="h5">
               <CountUp
                 start={0}
