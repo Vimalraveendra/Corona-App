@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NativeSelect, FormControl } from "@material-ui/core";
+import { Select, FormControl } from "@material-ui/core";
 import { fetchCountryData } from "../../api/api";
 import styles from "./CountrySelector.module.css";
 
@@ -12,23 +12,30 @@ const CountrySelector = ({ handleCountry }) => {
 
     fetchCountryAPI();
   }, [setFetchedCountries]);
-
+  console.log("I am getting called ");
   return (
     <FormControl className={styles.formControl}>
-      <NativeSelect
-        aria-label="Search Countries"
+      <Select
+        native
+        aria-label="Select Countries"
         defaultValue=""
         onChange={(e) => {
           handleCountry(e.target.value);
         }}
       >
-        <option value="">Select Country</option>
+        <option value="" aria-label="Select Countries">
+          Select Country
+        </option>
         {fetchedCountries.map((country, index) => (
-          <option value={country.name} key={index}>
+          <option
+            value={country.name}
+            key={index}
+            aria-label="picking countries"
+          >
             {country.name}
           </option>
         ))}
-      </NativeSelect>
+      </Select>
     </FormControl>
   );
 };
